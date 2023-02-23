@@ -1,0 +1,3 @@
+https://enjoytechnology.netlify.app/2020/05/18/insall-kafka-strimzi-operator-into-k3s/#strimzi-kafka-operator
+
+kubectl get pod -n kafka --watch

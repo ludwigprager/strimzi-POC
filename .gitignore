@@ -1,0 +1,7 @@
+kubeconfig
+kubeconfig.*
+k3d
+helm
+helm.*
+events.txt
+external-service.yaml
