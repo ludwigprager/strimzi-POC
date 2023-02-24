@@ -7,11 +7,7 @@ cd $BASEDIR
 source ./functions.sh
 source ./set-env.sh
 
-# download kubectl
-if [[ ! -f ./kubectl ]]; then
-  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-  chmod +x kubectl
-fi
+./20-get-tools.sh
 
 ./40-start-a-k8s-cluster.sh
 

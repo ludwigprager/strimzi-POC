@@ -8,22 +8,14 @@ source ./functions.sh
 source ./set-env.sh
 
 
-# install k3d
-if [[ ! -f ./k3d ]]; then
-  export K3D_INSTALL_DIR=${BASEDIR:-$(pwd)}
-  export USE_SUDO='false'
-  export PATH=$PATH:${BASEDIR} # k3d install fails otherwise
-  curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | TAG=v${K3D_VERSION} bash
-fi
 
-
-  if ! cluster-exists $CLUSTER; then
-    ./k3d cluster create $CLUSTER \
-      --wait 
+if ! cluster-exists $CLUSTER; then
+  ./k3d cluster create $CLUSTER \
+    --wait 
 
 #     --config k3d-config/$cluster.yaml \
 
-  fi
+fi
 
 # create endpoint in cluster pointing to my primary IP address
 kubectl apply -f manifest/namespace.yaml
