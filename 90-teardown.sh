@@ -10,7 +10,7 @@ source set-env.sh
 #set -x
 set +e
 
-./k3d cluster delete $CLUSTERS || true
+./k3d cluster delete $CLUSTER || true
 
-mv kubeconfig kubeconfig.$RANDOM
+mv kubeconfig kubeconfig.$RANDOM || true
 

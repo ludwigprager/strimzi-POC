@@ -1,3 +1,11 @@
 https://enjoytechnology.netlify.app/2020/05/18/insall-kafka-strimzi-operator-into-k3s/#strimzi-kafka-operator
 
 kubectl get pod -n kafka --watch
+
+git remote add github https://github.com/ludwigprager/strimzi-POC.git
+git push -u github master
+
+kubectl apply -f https://strimzi.io/examples/latest/kafka/kafka-persistent-single.yaml -n kafka
+
+https://github.com/strimzi/strimzi-kafka-operator/releases/download/0.33.2/strimzi-cluster-operator-0.33.2.yaml
+https://b-nova.com/en/home/content/heres-how-you-can-setup-kafka-with-strimzi-on-kubernetes-in-only-five-minutes

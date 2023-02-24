@@ -11,18 +11,13 @@ set -eu
 while true; do
   clear
 
-  for cluster in $CLUSTERS; do
-
-    echo $cluster:
-
-    kubectl get --context=k3d-${cluster} events \
+    kubectl get --context=k3d-${CLUSTER} events \
             --sort-by='.metadata.creationTimestamp' -A \
             | tail -n 5
 #   kubectl --context=k3d-${cluster} get events
 #           --sort-by='.metadata.creationTimestamp' -A >> events.txt
     echo
 
-  done
 
 # echo
 
