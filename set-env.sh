@@ -6,8 +6,7 @@ export PATH=${BASEDIR:-$(pwd)}:${PATH}
 export KUBECONFIG=${BASEDIR:-$(pwd)}/kubeconfig
 
 
-#export CLUSTERS="strimzi-POC"
-export CLUSTER="my-cluster"
+export CLUSTER="strimzi-POC"
 
 STRIMZI_VERSION=0.33.2
 
